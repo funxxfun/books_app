@@ -14,4 +14,16 @@
     <%= book.author %>
   </p>
 
+
+  <p>
+    <strong>Picture:</strong>
+    <%= image_tag(book.picture_url) if book.picture.present? %>
+  </p>
+
+  <p>
+    <%= link_to 'Show', book %>
+    <%= link_to 'Edit', edit_book_path(book) %>
+    <%= link_to 'Destroy', book, method: :delete, data: { confirm: 'Are you sure?' } %>
+  </p>
+
 </div>
